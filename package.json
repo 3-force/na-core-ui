@@ -1,7 +1,7 @@
 {
   "name": "@3-force/na-core-ui",
   "private": false,
-  "version": "0.1.0",
+  "version": "1.0.0",
   "type": "module",
   "main": "dist/na-core-ui.umd.js",
   "module": "dist/na-core-ui.es.js",
