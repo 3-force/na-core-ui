@@ -11,7 +11,7 @@ const config: StorybookConfig = {
   },
   viteFinal: (config, { configType }) => {
     if (configType === 'PRODUCTION') {
-      config.base = '/3-force/na-core-ui'
+      config.base = '/na-core-ui/'
     }
 
     config.plugins = config.plugins || []
