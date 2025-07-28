@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "type": "module",
   "main": "dist/na-core-ui.umd.js",
-  "module": "dist/na-core-ui.esm.js",
+  "module": "dist/na-core-ui.es.js",
   "types": "dist/na-core-ui.d.ts",
   "files": [
     "dist",
