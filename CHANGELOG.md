@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/3-force/na-core-ui/compare/v1.0.0...v1.1.0) (2025-07-28)
+
+### ✨ Features
+
+* **package:** add project metadata, author, license, homepage, keywords, and engines to package.json ([5413154](https://github.com/3-force/na-core-ui/commit/5413154e65d6687d4298c72cdb5d043dc5b5a36d))
+
 ## 1.0.0 (2025-07-28)
 
 ### ✨ Features
