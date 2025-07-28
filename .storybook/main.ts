@@ -1,4 +1,5 @@
 import type { StorybookConfig } from '@storybook/react-vite'
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 import tsconfigPaths from 'vite-tsconfig-paths'
 
 const config: StorybookConfig = {
@@ -8,9 +9,14 @@ const config: StorybookConfig = {
     name: '@storybook/react-vite',
     options: {},
   },
-  viteFinal: (config) => {
+  viteFinal: (config, { configType }) => {
+    if (configType === 'PRODUCTION') {
+      config.base = '/3-force/na-core-ui'
+    }
+
     config.plugins = config.plugins || []
-    config.plugins.push(tsconfigPaths()) // se usa aliases
+    config.plugins?.push(tsconfigPaths())
+    config.plugins?.push(viteStaticCopy({ targets: [{ src: '.nojekyll', dest: '.' }] }))
     return config
   },
 }
