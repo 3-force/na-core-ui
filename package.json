@@ -3,6 +3,25 @@
   "private": false,
   "version": "1.0.0",
   "type": "module",
+  "description": "Core UI components for 3-Force projects, built with React and Tailwind CSS.",
+  "keywords": [
+    "react",
+    "tailwindcss",
+    "ui",
+    "components",
+    "3-force",
+    "na-core-ui"
+  ],
+  "author": "3-Force",
+  "license": "MIT",
+  "homepage": "https://github.com/3-force/na-core-ui#readme",
+  "bugs": {
+    "url": "https://github.com/3-force/na-core-ui/issues"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=10.0.0"
+  },
   "main": "dist/na-core-ui.umd.js",
   "module": "dist/na-core-ui.es.js",
   "types": "dist/na-core-ui.d.ts",
