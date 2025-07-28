@@ -40,5 +40,6 @@ jobs:
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          NPM_TOKEN: ${{ secrets.GH_TOKEN }} # O semantic-release/npm usa esta variável
+          NPM_TOKEN: ${{ secrets.GH_TOKEN }}
+          HUSKY: 0
         run: pnpm semantic-release
