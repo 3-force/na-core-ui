@@ -1,6 +1,6 @@
 {
-  "name": "na-core-ui",
-  "private": true,
+  "name": "@3-force/na-core-ui",
+  "private": false,
   "version": "0.1.0",
   "type": "module",
   "main": "dist/index.umd.js",
@@ -10,6 +10,13 @@
     "dist",
     "tailwind-preset.js"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/3-force/na-core-ui.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
