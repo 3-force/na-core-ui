@@ -1,69 +1,67 @@
-# React + TypeScript + Vite
+# @3-force/na-core-ui
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📖 Sobre o Projeto
 
-Currently, two official plugins are available:
+Este projeto fornece um conjunto de componentes de UI reutilizáveis para aplicações React, desenvolvido pela 3-Force. Utiliza Tailwind CSS para estilização e visa acelerar o desenvolvimento de interfaces modernas, acessíveis e responsivas, facilitando a padronização visual em diferentes projetos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Principais Funcionalidades
 
-## Expanding the ESLint configuration
+- Componentes React prontos para uso (botões, alertas, drawer, collapse, avatar, etc.)
+- Suporte a Storybook para documentação e testes visuais
+- Integração com Tailwind CSS para customização rápida
+- Tipagem TypeScript para maior segurança
+- Workflows automatizados para release e publicação
+- Suporte a temas claro/escuro
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tecnologias Utilizadas (Tech Stack)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- React
+- Tailwind CSS
+- TypeScript
+- Storybook
+- Vite
+- pnpm
+- Lucide React
+- lightbox.js-react
+- prismjs
+- react-tooltip
+- remixicon
+- tailwind-merge
+- tailwind-variants
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🚀 Começando (Getting Started)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Pré-requisitos
+
+- Node.js (>= 20.0.0)
+- pnpm (>= 10.0.0)
+
+### Instalação
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/3-force/na-core-ui.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Acesse o diretório do projeto:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+cd na-core-ui
 ```
+
+3. Instale as dependências:
+
+```bash
+pnpm install
+```
+
+### Rodando o Projeto
+
+Para iniciar o servidor de desenvolvimento:
+
+```bash
+pnpm run dev
+```
+
+## 📄 Variáveis de Ambiente
