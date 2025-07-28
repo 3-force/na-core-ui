@@ -1,0 +1,68 @@
+# .github/workflows/deploy-storybook.yml
+
+# Nome do Workflow
+name: Deploy Storybook to GitHub Pages
+
+# Gatilho: Roda sempre que houver um push na branch 'main'
+on:
+  push:
+    branches: [main]
+
+# Permissões necessárias para o job poder publicar no GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Define que jobs concorrentes podem ser cancelados
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
+jobs:
+  # Job único para construir e publicar
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }} # URL do site publicado
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Clona o repositório
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. Configura o PNPM
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
+      # 3. Configura o Node.js
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      # 4. Instala as dependências
+      - name: Install dependencies
+        run: pnpm install
+
+      # 5. Constrói o site estático do Storybook
+      - name: Build Storybook
+        run: pnpm run build-storybook
+
+      # 6. Prepara o artefato (a pasta com o site) para o deploy
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # 7. Sobe o artefato para o GitHub Pages
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './storybook-static' # A pasta onde o Storybook foi construído
+
+      # 8. Faz o deploy do artefato no GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
