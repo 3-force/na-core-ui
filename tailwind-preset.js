@@ -253,6 +253,9 @@ module.exports = {
       clipPath: {
         triangle: 'polygon(50% 0%, 0% 100%, 100% 100%)',
       },
+      inset: {
+        auto: 'auto',
+      },
     },
   },
   plugins: [
