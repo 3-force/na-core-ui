@@ -33,9 +33,7 @@ jobs:
 
       # 2. Configura o PNPM
       - name: Set up pnpm
-        uses: pnpm/action-setup@v3
-        with:
-          version: 8
+        uses: pnpm/action-setup@v4
 
       # 3. Configura o Node.js
       - name: Set up Node
