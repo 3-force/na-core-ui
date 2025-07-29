@@ -1,3 +1,12 @@
+## [1.2.0](https://github.com/3-force/na-core-ui/compare/v1.1.0...v1.2.0) (2025-07-29)
+
+### ✨ Features
+
+* **card:** implement Card component with variants, colors, and responsive design ([9e40d4b](https://github.com/3-force/na-core-ui/commit/9e40d4b95c2e9028e640c96eab768b90643f3fa1))
+* **dropdown:** implement Dropdown component with context, triggers, and content handling ([9ed954c](https://github.com/3-force/na-core-ui/commit/9ed954c1d44fdd349e4a32364fd068d0f6244ecd))
+* **modal:** add Modal component with context and hooks for better state management ([976c488](https://github.com/3-force/na-core-ui/commit/976c488e9df9a9ae58f84af07d5779a91db1e32c))
+* **tailwind:** add auto inset utility to tailwind preset ([ceb6b58](https://github.com/3-force/na-core-ui/commit/ceb6b58fb82e261fa029813b39737bccb53ec810))
+
 ## [1.1.0](https://github.com/3-force/na-core-ui/compare/v1.0.0...v1.1.0) (2025-07-28)
 
 ### ✨ Features

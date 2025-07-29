@@ -1,7 +1,7 @@
 {
   "name": "@3-force/na-core-ui",
   "private": false,
-  "version": "1.1.0",
+  "version": "1.2.0",
   "type": "module",
   "description": "Core UI components for 3-Force projects, built with React and Tailwind CSS.",
   "keywords": [
